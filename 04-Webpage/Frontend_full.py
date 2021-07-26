@@ -1,7 +1,8 @@
 import streamlit as st
 import os
-import Silver_analysis as sa
 os.chdir('/app/centralbankanalytics')
+import Silver_analysis as sa
+
 st.set_page_config(page_title='Central Bank Analytics', page_icon='euro')
 
 def main():
