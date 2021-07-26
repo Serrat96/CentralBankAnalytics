@@ -6,8 +6,8 @@ from datetime import *
 import os
 
 a = 'Silver_analysisis:'
-b = os.listdir()#os.path.dirname(os.path.realpath(__file__))
-#os.chdir(path=r'app\centralbankanalytics\04-Webpage')
+b = os.path.dirname(os.path.realpath(__file__))#os.path.dirname(os.path.realpath(__file__))
+os.chdir(path='04-Webpage')
 try:
     # Ratio oro/plata
     gold_silver_ratio = pd.read_pickle(r'..\02-Data\03-Gold_vs_silver_ratio\01-Gold_vs_silver_ratio.pkl')
