@@ -8,7 +8,7 @@ st.text(sa.a)
 st.text(sa.b)
 
 os.chdir(r'/app/centralbankanalytics/04-Webpage')
-st.set_page_config(page_title='Central Bank Analytics', page_icon='euro')
+#st.set_page_config(page_title='Central Bank Analytics', page_icon='euro')
 
 try:
     def main():
