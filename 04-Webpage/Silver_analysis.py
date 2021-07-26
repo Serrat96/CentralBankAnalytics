@@ -4,6 +4,7 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from datetime import *
 import os
+os.chdir(path=r'.\04-Webpage')
 a = 'Silver_analysisis:'
 b = os.getcwd()
 '''os.chdir(path=r'.\CentralBankAnalytics\04-Webpage')
