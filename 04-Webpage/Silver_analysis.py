@@ -3,6 +3,9 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from datetime import *
+import os
+print(os.getcwd())
+os.chdir(path=r'.\CentralBankAnalytics\04-Webpage')
 
 # Ratio oro/plata
 gold_silver_ratio = pd.read_pickle(r'..\02-Data\03-Gold_vs_silver_ratio\01-Gold_vs_silver_ratio.pkl')
