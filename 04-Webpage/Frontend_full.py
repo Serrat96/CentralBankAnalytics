@@ -3,7 +3,7 @@ import os
 os.chdir(path=r'.\REPOSITORIOS\CentralBankAnalytics\04-Webpage')
 import Silver_analysis as sa
 
-st.set_page_config(page_title='Central Bank Analytics', page_icon='euro')
+'''st.set_page_config(page_title='Central Bank Analytics', page_icon='euro')
 
 def main():
     menu = st.sidebar.radio('Select:', ('Silver analysis', 'Crisis financiera'))
@@ -56,3 +56,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+'''
