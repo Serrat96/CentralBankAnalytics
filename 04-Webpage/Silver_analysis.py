@@ -6,7 +6,7 @@ from datetime import *
 import os
 
 a = 'Silver_analysisis:'
-b = os.path.dirname(os.path.realpath(__file__))
+b = os.listdir()#os.path.dirname(os.path.realpath(__file__))
 os.chdir(path=r'.\CentralBankAnalytics\04-Webpage')
 
 # Ratio oro/plata
