@@ -5,7 +5,7 @@ from plotly.subplots import make_subplots
 from datetime import *
 import os
 print(os.getcwd())
-os.chdir(path=r'.\CentralBankAnalytics\04-Webpage')
+'''os.chdir(path=r'.\CentralBankAnalytics\04-Webpage')
 
 # Ratio oro/plata
 gold_silver_ratio = pd.read_pickle(r'..\02-Data\03-Gold_vs_silver_ratio\01-Gold_vs_silver_ratio.pkl')
@@ -124,3 +124,4 @@ real_interest_rates_europe_graph.update_layout(title='Real interest rates in Eur
                                       showlegend=False, title_font_size=30, width= 850, height=600)
 
 
+'''
