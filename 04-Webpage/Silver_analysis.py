@@ -38,7 +38,7 @@ gold_inflation.update_yaxes(title_text="<b>Gold (annual change on monthly spot)<
 # M2 yearly growth vs inflation
 
 inflation_annually_2 = pd.read_parquet(r'/app/centralbankanalytics/02-Data/05-Inflation/01_Inflation_percentage_1913-01-01_2021-06-01_monthly_fred.parquet')
-m2_pct = pd.read_parquet(r'..\02-Data\06-M2\01_M2_percentage_1868-12-31-2021-01-01_yearly_fred.parquet')
+m2_pct = pd.read_parquet(r'/app/centralbankanalytics/02-Data/06-M2/01_M2_percentage_1868-12-31-2021-01-01_yearly_fred.parquet')
 
 mask_3 = (m2_pct.index >= datetime.strptime('1913-01-01', '%Y-%m-%d'))
 m2_pct = m2_pct.loc[mask_3]
