@@ -3,7 +3,8 @@ import os
 #os.chdir(path=r'.\REPOSITORIOS\CentralBankAnalytics\04-Webpage')
 import Silver_analysis as sa
 
-st.text('Frontend full:', os.getcwd())
+st.text('Frontend full:')
+st.text(os.getcwd())
 st.text(sa.a)
 st.text(sa.b)
 '''st.set_page_config(page_title='Central Bank Analytics', page_icon='euro')
