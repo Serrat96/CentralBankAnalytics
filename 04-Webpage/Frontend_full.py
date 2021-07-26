@@ -4,7 +4,7 @@ import os
 import Silver_analysis as sa
 
 st.text('Frontend full:')
-st.text(dir_path=os.path.dirname(os.path.realpath(__file__)))
+st.text(os.path.dirname(os.path.realpath(__file__)))
 st.text(sa.a)
 st.text(sa.b)
 '''st.set_page_config(page_title='Central Bank Analytics', page_icon='euro')
