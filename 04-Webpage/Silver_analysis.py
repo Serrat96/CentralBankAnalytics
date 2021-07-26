@@ -6,7 +6,7 @@ from datetime import *
 import os
 os.chdir('/app/centralbankanalytics/04-Webpage')
 # Ratio oro/plata
-gold_silver_ratio = pd.read_parquet(r'/app/centralbankanalytics//02-Data/03-Gold_vs_silver_ratio/01-Gold_vs_silver_ratio.parquet')
+gold_silver_ratio = pd.read_parquet(r'/app/centralbankanalytics/02-Data/03-Gold_vs_silver_ratio/01-Gold_vs_silver_ratio.parquet')
 gold_silver_ratio_graph = px.line(gold_silver_ratio, labels={
                      "Date": "Date",
                      "value": "Gold/Silver ratio"},)
@@ -16,7 +16,7 @@ gold_silver_ratio_graph.update_xaxes(rangeslider_thickness=0.1)
 
 
 # Gold is the perfect inflation Hedge
-inflation_annually = pd.read_pickle(r'/app/centralbankanalytics/02-Data\05-Inflation\01_Inflation_percentage_1913-01-01_2021-06-01_monthly_fred.parquet')
+inflation_annually = pd.read_pickle(r'/app/centralbankanalytics/02-Data/05-Inflation/01_Inflation_percentage_1913-01-01_2021-06-01_monthly_fred.parquet')
 gold_annually = pd.read_pickle(r'..\02-Data\01-Gold\05-Gold_percentage_1968-04_2021-07_monthly_datahub.parquet')
 mask = (inflation_annually.index >= datetime.strptime('1970-01-01', '%Y-%m-%d'))
 mask_2 = (gold_annually.index >= datetime.strptime('1970-01-01', '%Y-%m-%d'))
