@@ -16,7 +16,7 @@ gold_silver_ratio_graph.update_xaxes(rangeslider_thickness=0.1)
 
 
 # Gold is the perfect inflation Hedge
-inflation_annually = pd.read_pickle(r'..\02-Data\05-Inflation\01_Inflation_percentage_1913-01-01_2021-06-01_monthly_fred.parquet')
+inflation_annually = pd.read_pickle(r'/app/centralbankanalytics/02-Data\05-Inflation\01_Inflation_percentage_1913-01-01_2021-06-01_monthly_fred.parquet')
 gold_annually = pd.read_pickle(r'..\02-Data\01-Gold\05-Gold_percentage_1968-04_2021-07_monthly_datahub.parquet')
 mask = (inflation_annually.index >= datetime.strptime('1970-01-01', '%Y-%m-%d'))
 mask_2 = (gold_annually.index >= datetime.strptime('1970-01-01', '%Y-%m-%d'))
@@ -37,7 +37,7 @@ gold_inflation.update_yaxes(title_text="<b>Gold (annual change on monthly spot)<
 
 # M2 yearly growth vs inflation
 
-inflation_annually_2 = pd.read_pickle(r'..\02-Data\05-Inflation\01_Inflation_percentage_1913-01-01_2021-06-01_monthly_fred.parquet')
+inflation_annually_2 = pd.read_pickle(r'/app/centralbankanalytics/02-Data\05-Inflation\01_Inflation_percentage_1913-01-01_2021-06-01_monthly_fred.parquet')
 m2_pct = pd.read_pickle(r'..\02-Data\06-M2\01_M2_percentage_1868-12-31-2021-01-01_yearly_fred.parquet')
 
 mask_3 = (m2_pct.index >= datetime.strptime('1913-01-01', '%Y-%m-%d'))
@@ -58,7 +58,7 @@ m2_inflation.update_xaxes(rangeslider_thickness=0.1)
 
 #10 year interest rate vs gold
 
-interest_rates_10_year = pd.read_pickle(r'..\02-Data\07-Interest_rates\05-10YearTreasuryInflationIndexedSecurity_percentage_2003-01-02_2021-07-22_daily_fred.parquet')
+interest_rates_10_year = pd.read_pickle(r'/app/centralbankanalytics/02-Data\07-Interest_rates\05-10YearTreasuryInflationIndexedSecurity_percentage_2003-01-02_2021-07-22_daily_fred.parquet')
 gold_ounce = pd.read_pickle(r'..\02-Data\01-Gold\01_Gold_USD-GBP-EUR_1968-01-02_2021-07-22_daily_lbma.parquet')
 
 mask_4 = (gold_ounce.index >= datetime.strptime('2003-01-02', '%Y-%m-%d'))
@@ -83,7 +83,7 @@ interest_10_years_gold.update_xaxes(rangeslider_thickness=0.1)
 
 # Plata a largo plazo (escala logarítmica)
 
-silver_log = pd.read_pickle(r'..\02-Data\02-Silver\04_Silver_USD_1791-12-31_2020-12-31_yearly_logarithmic_denvergold.parquet')
+silver_log = pd.read_pickle(r'/app/centralbankanalytics/02-Data\02-Silver\04_Silver_USD_1791-12-31_2020-12-31_yearly_logarithmic_denvergold.parquet')
 silver_log_graph = px.line(silver_log, labels={
                      "Date": "Date",
                      "value": "USD"})
@@ -93,7 +93,7 @@ silver_log_graph.update_layout(title='Silver in logarithmic scale', xaxis_ranges
 
 # Plata a largo plazo (escala logarítmica ajustada por inflación)
 
-silver_log_inflation = pd.read_pickle(r'..\02-Data\02-Silver\05-Silver_USD_inflation-adjusted_1791-12-31_2020-12-31_yearly_logarithmic_denvergold.parquet')
+silver_log_inflation = pd.read_pickle(r'/app/centralbankanalytics/02-Data\02-Silver\05-Silver_USD_inflation-adjusted_1791-12-31_2020-12-31_yearly_logarithmic_denvergold.parquet')
 silver_log_inflation_graph = px.line(silver_log_inflation, labels={
                      "Date": "Date",
                      "value": "USD"})
@@ -104,8 +104,8 @@ silver_log_inflation_graph.update_layout(title='Silver in logarithmic scale (adj
 
 #Tipos de interés reales en Europa y EE.UU
 
-real_interest_rates_USA = pd.read_pickle(r'..\02-Data\08-Real_interest_rates\01-RealInterestRates_percentage_1954-07-01_2021-06-01_monthly_fred.parquet')
-real_interest_rates_europe = pd.read_pickle(r'..\02-Data\11-Real_interest_rates_Europe\01-Real_interest_rates_2003-01-31_2021-05-31_monthly_ecb.parquet')
+real_interest_rates_USA = pd.read_pickle(r'/app/centralbankanalytics/02-Data\08-Real_interest_rates\01-RealInterestRates_percentage_1954-07-01_2021-06-01_monthly_fred.parquet')
+real_interest_rates_europe = pd.read_pickle(r'/app/centralbankanalytics/02-Data\11-Real_interest_rates_Europe\01-Real_interest_rates_2003-01-31_2021-05-31_monthly_ecb.parquet')
 
 real_interest_rates_USA_graph = px.line(real_interest_rates_USA, labels={
                      "index": "Date",
