@@ -4,7 +4,8 @@ import os
 import Silver_analysis as sa
 
 st.text('Frontend full:', os.getcwd())
-st.text(sa.a, sa.b)
+st.text(sa.a)
+st.text(sa.b)
 '''st.set_page_config(page_title='Central Bank Analytics', page_icon='euro')
 
 def main():
