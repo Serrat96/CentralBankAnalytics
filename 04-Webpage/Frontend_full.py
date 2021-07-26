@@ -7,7 +7,9 @@ st.text('Frontend full:')
 st.text(os.path.dirname(os.path.realpath(__file__)))
 st.text(sa.a)
 st.text(sa.b)
-'''st.set_page_config(page_title='Central Bank Analytics', page_icon='euro')
+
+os.chdir(r'/app/centralbankanalytics/04-Webpage')
+st.set_page_config(page_title='Central Bank Analytics', page_icon='euro')
 
 def main():
     menu = st.sidebar.radio('Select:', ('Silver analysis', 'Crisis financiera'))
@@ -60,4 +62,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-'''
