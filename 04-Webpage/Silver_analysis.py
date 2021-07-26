@@ -59,7 +59,7 @@ m2_inflation.update_xaxes(rangeslider_thickness=0.1)
 #10 year interest rate vs gold
 
 interest_rates_10_year = pd.read_parquet(r'/app/centralbankanalytics/02-Data/07-Interest_rates/05-10YearTreasuryInflationIndexedSecurity_percentage_2003-01-02_2021-07-22_daily_fred.parquet')
-gold_ounce = pd.read_parquet(r'..\02-Data\01-Gold\01_Gold_USD-GBP-EUR_1968-01-02_2021-07-22_daily_lbma.parquet')
+gold_ounce = pd.read_parquet(r'/app/centralbankanalytics/02-Data/01-Gold/01_Gold_USD-GBP-EUR_1968-01-02_2021-07-22_daily_lbma.parquet')
 
 mask_4 = (gold_ounce.index >= datetime.strptime('2003-01-02', '%Y-%m-%d'))
 gold_ounce = gold_ounce.loc[mask_4]
