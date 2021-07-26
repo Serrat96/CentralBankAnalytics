@@ -1,7 +1,8 @@
 import streamlit as st
-#import os
+import os
+print(os.getcwd())
 #os.chdir(r'C:\Users\serra\REPOSITORIOS\CentralBankAnalytics\04-Webpage')
-import Silver_analysis as sa
+'''import Silver_analysis as sa
 
 st.set_page_config(page_title='Central Bank Analytics', page_icon='euro')
 
@@ -56,3 +57,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+'''
