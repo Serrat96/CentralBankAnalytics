@@ -4,9 +4,11 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from datetime import *
 import os
-os.chdir(path=r'.\04-Webpage')
+#os.chdir(path=r'.\04-Webpage')
+
+
 a = 'Silver_analysisis:'
-b = os.getcwd()
+b = dir_path = os.path.dirname(os.path.realpath(__file__))
 '''os.chdir(path=r'.\CentralBankAnalytics\04-Webpage')
 
 # Ratio oro/plata

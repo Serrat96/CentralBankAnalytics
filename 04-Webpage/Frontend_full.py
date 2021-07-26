@@ -1,10 +1,10 @@
 import streamlit as st
 import os
-os.chdir(path=r'.\04-Webpage')
+#os.chdir(path=r'.\04-Webpage')
 import Silver_analysis as sa
 
 st.text('Frontend full:')
-st.text(os.getcwd())
+st.text(dir_path=os.path.dirname(os.path.realpath(__file__)))
 st.text(sa.a)
 st.text(sa.b)
 '''st.set_page_config(page_title='Central Bank Analytics', page_icon='euro')
