@@ -6,7 +6,7 @@ from datetime import *
 import os
 
 a = 'Silver_analysisis:'
-b = os.path.dirname(os.path.realpath(__file__))#os.path.dirname(os.path.realpath(__file__))
+b = os.getcwd()#os.path.dirname(os.path.realpath(__file__))
 os.chdir(path='04-Webpage')
 try:
     # Ratio oro/plata

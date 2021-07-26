@@ -3,7 +3,7 @@ import os
 import Silver_analysis as sa
 
 st.text('Frontend full:')
-st.text(os.path.dirname(os.path.realpath(__file__)))
+st.text(os.getcwd())
 st.text(sa.a)
 st.text(sa.b)
 
