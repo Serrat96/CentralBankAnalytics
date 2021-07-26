@@ -1,6 +1,5 @@
 import streamlit as st
 import os
-#os.chdir(path=r'.\04-Webpage')
 import Silver_analysis as sa
 
 st.text('Frontend full:')
