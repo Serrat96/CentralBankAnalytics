@@ -8,6 +8,7 @@ import os
 a = 'Silver_analysisis:'
 b = os.getcwd()#os.path.dirname(os.path.realpath(__file__))
 os.chdir(path='04-Webpage')
+c=os.getcwd()
 try:
     # Ratio oro/plata
     gold_silver_ratio = pd.read_pickle(r'..\02-Data\03-Gold_vs_silver_ratio\01-Gold_vs_silver_ratio.pkl')

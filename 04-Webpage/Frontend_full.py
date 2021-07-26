@@ -6,6 +6,7 @@ st.text('Frontend full:')
 st.text(os.getcwd())
 st.text(sa.a)
 st.text(sa.b)
+st.text(sa.c)
 
 os.chdir(r'/app/centralbankanalytics/04-Webpage')
 #st.set_page_config(page_title='Central Bank Analytics', page_icon='euro')
