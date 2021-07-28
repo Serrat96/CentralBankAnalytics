@@ -3,6 +3,11 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from datetime import *
+import pathlib
+import os
+
+current_dir = pathlib.Path(__file__).parent
+os.chdir(current_dir)
 
 # Ratio oro/plata
 gold_silver_ratio = pd.read_pickle(r'..\02-Data\03-Gold_vs_silver_ratio\01-Gold_vs_silver_ratio.pkl')
@@ -10,8 +15,9 @@ gold_silver_ratio_graph = px.line(gold_silver_ratio, labels={
                      "Date": "Date",
                      "value": "Gold/Silver ratio"},)
 gold_silver_ratio_graph.update_layout(title='Gold/Silver ratio since 1791', xaxis_rangeslider_visible=True,
-                                      showlegend=False, title_font_size=30, width= 850, height=600)
-gold_silver_ratio_graph.update_xaxes(rangeslider_thickness=0.1)
+                                      showlegend=False, title_font_size=30, width=850, height=600)
+gold_silver_ratio_graph.update_xaxes(rangeslider_thickness=0.1, showgrid=False)
+gold_silver_ratio_graph.update_yaxes(showgrid=False)
 
 
 # Gold is the perfect inflation Hedge
@@ -29,9 +35,9 @@ gold_inflation.add_trace(go.Scatter(x=gold_annually.index, y=gold_annually['Valu
                          secondary_y=True)
 gold_inflation.update_layout(title='CPI annual change vs Gold annual change', xaxis_rangeslider_visible=True,
                                       title_font_size=30, width= 850, height=600)
-gold_inflation.update_xaxes(rangeslider_thickness=0.1)
-gold_inflation.update_yaxes(title_text="<b>CPI (annual change on monthly spot)</b>", tickformat='%', secondary_y=False)
-gold_inflation.update_yaxes(title_text="<b>Gold (annual change on monthly spot)</b>", tickformat='%', secondary_y=True)
+gold_inflation.update_xaxes(rangeslider_thickness=0.1, showgrid=False)
+gold_inflation.update_yaxes(title_text="<b>CPI (annual change on monthly spot)</b>", tickformat='%', secondary_y=False, showgrid=False)
+gold_inflation.update_yaxes(title_text="<b>Gold (annual change on monthly spot)</b>", tickformat='%', secondary_y=True, showgrid=False)
 
 
 # M2 yearly growth vs inflation
@@ -50,10 +56,10 @@ m2_inflation.add_trace(go.Scatter(x=m2_pct.index, y=m2_pct['Value'], name='M2<br
 m2_inflation.update_layout(title='M2 yearly growth vs inflation', xaxis_rangeslider_visible=True,
                                       title_font_size=30, width= 850, height=600)
 
-m2_inflation.update_yaxes(title_text="Inflation annual change", tickformat='%', secondary_y=False)
-m2_inflation.update_yaxes(title_text="M2 annual change", tickformat='%', secondary_y=True)
+m2_inflation.update_yaxes(title_text="Inflation annual change", tickformat='%', secondary_y=False, showgrid=False)
+m2_inflation.update_yaxes(title_text="M2 annual change", tickformat='%', secondary_y=True, showgrid=False)
 
-m2_inflation.update_xaxes(rangeslider_thickness=0.1)
+m2_inflation.update_xaxes(rangeslider_thickness=0.1, showgrid=False)
 
 #10 year interest rate vs gold
 
@@ -75,10 +81,10 @@ interest_10_years_gold.add_trace(go.Scatter(x=gold_ounce.index, y=gold_ounce['Va
 interest_10_years_gold.update_layout(title='10-year USD real interest rates vs gold price', xaxis_rangeslider_visible=True,
                                       title_font_size=30, width=850, height=600)
 
-interest_10_years_gold.update_yaxes(title_text="Real 10-year interest rates for USD", tickformat='%', secondary_y=False)
-interest_10_years_gold.update_yaxes(title_text="Gold price (per ounce)", secondary_y=True)
+interest_10_years_gold.update_yaxes(title_text="Real 10-year interest rates for USD", tickformat='.0%', secondary_y=False, showgrid=False)
+interest_10_years_gold.update_yaxes(title_text="Gold price (per ounce)", secondary_y=True, showgrid=False)
 
-interest_10_years_gold.update_xaxes(rangeslider_thickness=0.1)
+interest_10_years_gold.update_xaxes(rangeslider_thickness=0.1, showgrid=False)
 
 # Plata a largo plazo (escala logarítmica)
 
@@ -86,7 +92,8 @@ silver_log = pd.read_pickle(r'..\02-Data\02-Silver\04_Silver_USD_1791-12-31_2020
 silver_log_graph = px.line(silver_log, labels={
                      "Date": "Date",
                      "value": "USD"})
-silver_log_graph.update_xaxes(rangeslider_thickness=0.1)
+silver_log_graph.update_xaxes(rangeslider_thickness=0.1, showgrid=False)
+silver_log_graph.update_yaxes(showgrid=False)
 silver_log_graph.update_layout(title='Silver in logarithmic scale', xaxis_rangeslider_visible=True, showlegend=False,
                                       title_font_size=30, width=850, height=600)
 
@@ -96,7 +103,8 @@ silver_log_inflation = pd.read_pickle(r'..\02-Data\02-Silver\05-Silver_USD_infla
 silver_log_inflation_graph = px.line(silver_log_inflation, labels={
                      "Date": "Date",
                      "value": "USD"})
-silver_log_inflation_graph.update_xaxes(rangeslider_thickness=0.1)
+silver_log_inflation_graph.update_xaxes(rangeslider_thickness=0.1, showgrid=False)
+silver_log_inflation_graph.update_yaxes(showgrid=False)
 silver_log_inflation_graph.update_layout(title='Silver in logarithmic scale (adjusted by inflation)',
                                          xaxis_rangeslider_visible=True, showlegend=False,
                                          title_font_size=30, width=850, height=600)
@@ -109,14 +117,16 @@ real_interest_rates_europe = pd.read_pickle(r'..\02-Data\11-Real_interest_rates_
 real_interest_rates_USA_graph = px.line(real_interest_rates_USA, labels={
                      "index": "Date",
                      "value": "Percentage"},)
-real_interest_rates_USA_graph.update_xaxes(rangeslider_thickness=0.1)
+real_interest_rates_USA_graph.update_xaxes(rangeslider_thickness=0.1, showgrid=False)
+real_interest_rates_USA_graph.update_yaxes(showgrid=False)
 real_interest_rates_USA_graph.update_layout(title='Real interest rates in USA', xaxis_rangeslider_visible=True,
                                       showlegend=False, title_font_size=30, width= 850, height=600)
 
 real_interest_rates_europe_graph = px.line(real_interest_rates_europe, labels={
                      "Date": "Date",
                      "value": "Percentage"},)
-real_interest_rates_europe_graph.update_xaxes(rangeslider_thickness=0.1)
+real_interest_rates_europe_graph.update_xaxes(rangeslider_thickness=0.1, showgrid=False)
+real_interest_rates_europe_graph.update_yaxes(showgrid=False)
 real_interest_rates_europe_graph.update_layout(title='Real interest rates in Europe', xaxis_rangeslider_visible=True,
                                       showlegend=False, title_font_size=30, width= 850, height=600)
 

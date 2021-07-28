@@ -1,7 +1,10 @@
 import streamlit as st
 import os
-os.chdir(r'C:\Users\serra\REPOSITORIOS\CentralBankAnalytics\04-Webpage')
 import Silver_analysis as sa
+import pathlib
+
+current_dir = pathlib.Path(__file__).parent
+os.chdir(current_dir)
 
 st.set_page_config(page_title='Central Bank Analytics', page_icon='euro')
 
