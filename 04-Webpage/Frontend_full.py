@@ -1,6 +1,7 @@
 import streamlit as st
 import os
 import pathlib
+st.text(pathlib.Path(__file__))
 cwd = pathlib.Path(__file__).resolve().parent
 os.chdir(cwd)
 import Silver_analysis as sa
