@@ -7,3 +7,17 @@ a = pd.read_parquet(pathlib.Path(path).absolute())
 path_2 = path[3:]
 cwd = initial_path + path_2
 print(cwd)
+
+
+
+
+
+
+
+
+'''import os
+import pathlib
+st.text(os.getcwd())
+cwd = pathlib.Path(__file__).resolve().parent
+print(cwd)
+os.chdir(cwd)'''
