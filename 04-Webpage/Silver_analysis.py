@@ -3,14 +3,9 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from datetime import *
-import pathlib
-import os
-
-current_dir = pathlib.Path(__file__).parent
-os.chdir(current_dir)
 
 # Ratio oro/plata
-gold_silver_ratio = pd.read_pickle(r'..\02-Data\03-Gold_vs_silver_ratio\01-Gold_vs_silver_ratio.pkl')
+gold_silver_ratio = pd.read_pickle(r'.\02-Data\03-Gold_vs_silver_ratio\01-Gold_vs_silver_ratio.pkl')
 gold_silver_ratio_graph = px.line(gold_silver_ratio, labels={
                      "Date": "Date",
                      "value": "Gold/Silver ratio"},)
