@@ -1,9 +1,9 @@
 import streamlit as st
 import os
+import pathlib
 current_dir = pathlib.Path(__file__).parent
 os.chdir(current_dir)
 import Silver_analysis as sa
-import pathlib
 
 current_dir = pathlib.Path(__file__).parent
 os.chdir(current_dir)
