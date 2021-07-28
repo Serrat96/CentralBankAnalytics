@@ -1,8 +1,7 @@
 import pandas as pd
+import pathlib
 
 
 def read_data(path: str):
-    try:
-        return pd.read_parquet(path)
-    except:
-        return pd.read_parquet('.' + path)
+        return pd.read_parquet(pathlib.Path(path).absolute())
+
