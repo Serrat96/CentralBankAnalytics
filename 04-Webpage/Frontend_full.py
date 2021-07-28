@@ -1,8 +1,8 @@
 import streamlit as st
 import os
 import pathlib
-#cwd = pathlib.Path(__file__).resolve().parent
-#os.chdir(cwd)
+cwd = pathlib.Path(__file__).resolve().parent
+os.chdir(cwd)
 import Silver_analysis as sa
 
 st.set_page_config(page_title='Central Bank Analytics', page_icon='euro')
