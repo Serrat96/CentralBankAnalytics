@@ -11,7 +11,7 @@ cwd = pathlib.Path(__file__).resolve().parent
 os.chdir(cwd)
 
 # Ratio oro/plata
-gold_silver_ratio = ft.read_data(r'..\02-Data\03-Gold_vs_silver_ratio\01-Gold_vs_silver_ratio.parquet')
+gold_silver_ratio = ft.read_data(r'../02-Data/03-Gold_vs_silver_ratio/01-Gold_vs_silver_ratio.parquet')
 gold_silver_ratio_graph = px.line(gold_silver_ratio, labels={
                      "Date": "Date",
                      "value": "Gold/Silver ratio"},)
