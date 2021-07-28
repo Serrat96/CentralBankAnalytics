@@ -1,5 +1,7 @@
 import streamlit as st
 import os
+current_dir = pathlib.Path(__file__).parent
+os.chdir(current_dir)
 import Silver_analysis as sa
 import pathlib
 
