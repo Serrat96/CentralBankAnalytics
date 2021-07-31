@@ -20,9 +20,9 @@ def main():
         st.markdown('# Is it worth it to buy silver or gold?')
         st.markdown('## **1- Historical relationship between gold and silver**')
         st.write('Gold and silver have had a close relationship for a long time.\n\n'
-                 'In the following graph it can be seen that since 1791 the two assets maintain one'
+                 'In the following graph it can be seen that since 1791 the two assets maintain a '
                  'close relationship for a long time. Having areas of soil where it is preferable '
-                 'having gold to having silver and roof areas where it is preferable to have silver to having'
+                 'having gold to having silver and roof areas where it is preferable to have silver to having '
                  'gold.')
         st.plotly_chart(sa.gold_silver_ratio_graph)
         st.markdown('## **2- Relationship between inflation and gold**')
@@ -30,37 +30,37 @@ def main():
                  "It can be seen that since 1970, gold tends to rise when inflationary pressures occur.")
         st.plotly_chart(sa.gold_inflation)
         st.markdown('## **3- Relationship between inflation and M2**')
-        st.write('As can be seen in the following graph, the unprecedented increase that is'
-                 'occurring with respect to the amount of M2 (in USD), currently 25%,'
-                 'indicates that inflation is closely linked to M2, which tells us'
+        st.write('As can be seen in the following graph, the unprecedented increase that is '
+                 'occurring with respect to the amount of M2 (in USD), currently 25%, '
+                 'indicates that inflation is closely linked to M2, which tells us '
                  'the beginning at this time of strong inflationary pressures.')
         st.plotly_chart(sa.m2_inflation)
         st.markdown('## **4- Relationship between real interest rates, gold and silver **')
-        st.write('This explained above serves to put us in context of what the situation is'
-                 'current and whether it can benefit gold and silver or not. Notwithstanding the gold and the'
-                 'Silver is really driven by real interest rates.')
+        st.write('This explained above serves to put us in context of what the situation is '
+                 'and whether it can benefit gold and silver or not. Notwithstanding gold and '
+                 'Silver are really driven by real interest rates.')
         st.markdown('### **What are real interest rates?**')
         st.write('Real interest rate = Nominal interest rate - Inflation.\n\n'
-                 'The nominal interest rate represents the official rate set by central banks'
+                 'The nominal interest rate represents the official rate set by central banks '
                  'to grant credits.'
-                 'As can be seen in the graph above, inflationary pressures are already beginning'
-                 'to appear strongly and investors are counting on them. If central bank'
-                 'they continue with the policy of keeping rates close to 0% the real interest rate'
-                 'it will fall more and more.'
-                 'It can be seen in the following two graphs how these rates are found'
-                 'currently declining due to expansion policies by the'
+                 'As can be seen in the graph above, inflationary pressures are already beginning '
+                 'to appear strongly and investors are counting on them. If central banks '
+                 'continue with the 0% rates policy, real interests rates '
+                 'will fall more and more.'
+                 'It can be seen in the following two graphs how these rates are found '
+                 'currently declining due to expansion policies by the '
                  'American and European central banks.')
         st.plotly_chart(sa.real_interest_rates_USA_graph)
         st.plotly_chart(sa.real_interest_rates_europe_graph)
-        st.write('In the following graph we can see how the relationship between gold and'
-                 'interest rates are inverse, which indicates that gold is an asset capable of'
-                 'protect its owner against the loss of value of FIAT currencies, plus'
+        st.write('In the following graph we can see how the relationship between gold and '
+                 'interest rates are inverse, which indicates gold is an asset capable of '
+                 'protect its owner against the loss of value of FIAT currencies, '
                  'known as inflation.')
         st.plotly_chart(sa.interest_10_years_gold)
-        st.write('Also, if we look at the logarithmic scale, silver has a trend'
-                 'Very clear long-term bullish, trading far from all-time highs.')
+        st.write('Also, if we look at the logarithmic scale, silver has a '
+                 'very clear long-term bullish, trading far from all-time highs.')
         st.plotly_chart(sa.silver_log_graph)
-        st.write('Finally, if we adjust silver for inflation we see that it really is not'
+        st.write('Finally, if we adjust silver for inflation we see that it really is not '
                  'expensive and right now may be a good time to buy.')
         st.plotly_chart(sa.silver_log_inflation_graph)
         st.markdown('## Sources')
