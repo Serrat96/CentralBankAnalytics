@@ -6,7 +6,7 @@ except:
     pass
 import silver_analysis as sa
 
-st.set_page_config(page_title='Central Bank Analytics', page_icon='euro', layout='wide')
+st.set_page_config(page_title='Central Bank Analytics', page_icon='euro')
 
 def main():
     language = st.sidebar.radio('Language:', ('EN', 'ES'))
