@@ -1,2 +1,2 @@
-# CentralBanksData
-Visualization of hypothesis using data obtained from official government sources, central banks and financial institutions
+# GoldAnalysis
+Exhaustive analysisi about the convenience (or not) of buy gold
